@@ -46,7 +46,7 @@ jobs:
   team-labeler:
     runs-on: ubuntu-latest
     steps:
-    - uses: JulienKode/team-labeler-action@v0.1.1
+    - uses: MarcelBochtler/team-labeler-action@main
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
 ```
