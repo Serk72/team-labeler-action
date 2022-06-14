@@ -29,9 +29,11 @@ export async function isUserMemberOfTeam(
     org: org,
     team_slug: teamSlug,
     username: username
-  })
+  }).catch((ex) => {
+        // Do Nothing
+  });
 
-  if (response.status === 200) {
+  if (response && response.status === 200) {
     return response.data.state === 'active'
   } else {
     return false
